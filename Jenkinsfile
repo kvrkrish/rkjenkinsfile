@@ -26,6 +26,9 @@ node {
 	stage('package') {
     bat 'mvn package'  
     }
+	stage('deploy') {
+    bat 'mvn deploy'  
+    }
 	
 }
 
