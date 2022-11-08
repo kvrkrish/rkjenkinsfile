@@ -5,6 +5,12 @@ node {
 	git branch: 'main', credentialsId: 'rkgit', url: 'https://github.com/kvrkrish/RK.git'
         
     }
+	
+    stage('clean') {
+	
+	bat 'mvn clean'
+        
+    }
     
     stage('validate') {
 	
