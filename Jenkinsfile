@@ -17,6 +17,10 @@ node {
 	bat 'mvn validate'
         
     }
+	stage ('sonar scan'){
+	bat 'mvn sonar:sonar -Dsonar.host.url=http://13.232.70.0:9000 -Dsonar.login=31c6b4704868b6ee29767b198f41a0c768cbba8e'
+	}
+	
     stage('compile') {
     bat 'mvn compile'  
     }
